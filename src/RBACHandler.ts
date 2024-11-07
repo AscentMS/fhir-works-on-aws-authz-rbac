@@ -30,7 +30,6 @@ import isEqual from 'lodash/isEqual';
 
 import { Rule, RBACConfig } from './RBACConfig';
 
-// eslint-disable-next-line import/prefer-default-export
 export class RBACHandler implements Authorization {
     private readonly version: number = 1.0;
 
@@ -59,7 +58,6 @@ export class RBACHandler implements Authorization {
         return decoded;
     }
 
-    // eslint-disable-next-line class-methods-use-this
     async isAccessBulkDataJobAllowed(request: AccessBulkDataJobRequest): Promise<void> {
         if (request.userIdentity.sub !== request.jobOwnerId) {
             throw new UnauthorizedError('Unauthorized');
@@ -89,13 +87,13 @@ export class RBACHandler implements Authorization {
         });
     }
 
-    // eslint-disable-next-line class-methods-use-this
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async authorizeAndFilterReadResponse(request: ReadResponseAuthorizedRequest): Promise<any> {
         // Currently no additional filtering/checking is needed for RBAC
         return request.readResponse;
     }
 
-    // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     async isWriteRequestAuthorized(_request: WriteRequestAuthorizedRequest): Promise<void> {}
 
     private isAllowed(groups: string[], operation: TypeOperation | SystemOperation, resourceType?: string): void {
@@ -164,7 +162,7 @@ export class RBACHandler implements Authorization {
         throw new UnauthorizedError('Unauthorized');
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars,class-methods-use-this
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     async getSearchFilterBasedOnIdentity(request: GetSearchFilterBasedOnIdentityRequest): Promise<SearchFilter[]> {
         return [];
     }

@@ -212,7 +212,6 @@ describe('verifyAccessToken', () => {
 
     test('Attempt to create a handler to support a new config version; expected Error', async () => {
         expect(() => {
-            // eslint-disable-next-line no-new
             new RBACHandler(
                 {
                     version: 2.0,
@@ -225,6 +224,7 @@ describe('verifyAccessToken', () => {
 });
 
 describe('verifyAccessToken:Export', () => {
+    //eslint-disable-next-line @typescript-eslint/no-explicit-any
     const getTestPractitionerRBACRules = (operations: TypeOperation[], resources: any) => ({
         version: 1.0,
         groupRules: {
