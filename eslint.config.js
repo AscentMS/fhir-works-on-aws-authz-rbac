@@ -4,7 +4,8 @@ export default tseslint.config(
     ...tseslint.configs.recommended,
     {
         ignores: [
-            "lib/"
+            "lib/",
+            "coverage/"
         ]
     }
 );
