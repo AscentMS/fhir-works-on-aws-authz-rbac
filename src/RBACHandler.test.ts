@@ -10,7 +10,7 @@ import {
     BASE_STU3_RESOURCES,
     AccessBulkDataJobRequest,
     UnauthorizedError,
-} from 'fhir-works-on-aws-interface';
+} from '@ascentms/fhir-works-on-aws-interface';
 import shuffle from 'shuffle-array';
 import { RBACHandler } from './RBACHandler';
 import { RBACConfig } from './RBACConfig';

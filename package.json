@@ -32,7 +32,7 @@
     "standard-version": "standard-version --skip.tag=true"
   },
   "dependencies": {
-    "fhir-works-on-aws-interface": "^11.1.0",
+    "@ascentms/fhir-works-on-aws-interface": "^12.1.1",
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21"
   },

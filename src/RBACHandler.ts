@@ -24,7 +24,7 @@ import {
     KeyValueMap,
     GetSearchFilterBasedOnIdentityRequest,
     SearchFilter,
-} from 'fhir-works-on-aws-interface';
+} from '@ascentms/fhir-works-on-aws-interface';
 
 import isEqual from 'lodash/isEqual';
 

@@ -3,7 +3,7 @@
  *  SPDX-License-Identifier: Apache-2.0
  */
 
-import { TypeOperation, SystemOperation } from 'fhir-works-on-aws-interface';
+import { TypeOperation, SystemOperation } from '@ascentms/fhir-works-on-aws-interface';
 
 export interface Rule {
     operations: (TypeOperation | SystemOperation)[];
